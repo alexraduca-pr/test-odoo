@@ -1,0 +1,30 @@
+# Python environment and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDEs and Text Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Odoo specific (just in case they run a local instance nearby)
+*.log
+.odoorc
+/filestore/
+/sessions/
+
+# Per-developer module settings for addons/.githooks/pre-push (see .env.example)
+.env

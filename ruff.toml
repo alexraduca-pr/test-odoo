@@ -1,0 +1,26 @@
+target-version = "py312"
+
+[lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes (undefined names, unused imports)
+    "T",    # flake8-print (print() calls)
+    "UP",   # pyupgrade (modern Python syntax)
+    "I",    # isort (import ordering)
+    "SIM",  # flake8-simplify
+]
+ignore = [
+    "E501",     # line-too-long — not enforced in Odoo core either
+    "SIM102",   # collapsible-if — Odoo ignores this
+    "SIM108",   # ternary-instead-of-if-else — too pedantic for learners
+    "SIM117",   # combine-with-statements — reduces readability for beginners
+]
+
+[lint.per-file-ignores]
+"**/__init__.py" = ["F401"]  # Odoo re-export pattern
+
+[lint.isort]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+known-first-party = ["odoo"]
+known-local-folder = ["odoo.addons"]
