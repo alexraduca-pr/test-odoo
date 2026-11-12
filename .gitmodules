@@ -1,0 +1,4 @@
+[submodule "odoo-training-resources"]
+	path = odoo-training-resources
+	url = git@github.com:pr-consulting-eu/odoo-training-resources.git
+	branch = main_PLO
